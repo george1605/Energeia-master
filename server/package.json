@@ -1,28 +1,5 @@
 {
-  "name": "energeia-master",
-  "version": "1.2.0",
-  "description": "The energeia website on vercel",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node index.js",
-    "start": "node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/george1605/Energeia-master.git"
-  },
-  "keywords": [
-    "node",
-    "better-web"
-  ],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/george1605/Energeia-master/issues"
-  },
-  "dependencies": {
-    "express": "^4.18.1"
-  },
-  "homepage": "https://github.com/george1605/Energeia-master#readme"
+    "build": "[my-framework] build --output public"
+  }
 }
