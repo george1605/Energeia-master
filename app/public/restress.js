@@ -93,13 +93,12 @@ Restress.genPoints = [];
 
 Restress.smartLoad = function(page, func) {
   var xhr = new XMLHttpRequest();
+  xhr.open("GET", page, true);
   xhr.onreadystatechange = () => {
-    if (xhr.readyState == 200 && xhr.status == 4)
-    {
+    if (xhr.readyState == 200 && xhr.status == 4) {
       func(this);
     }
   }
-  xhr.open("GET", page, true);
   xhr.send();
 }
 
