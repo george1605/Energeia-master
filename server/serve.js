@@ -5,7 +5,7 @@ const path = require('path');
 const mime = require('./mime');
 
 console.log("Starting server");
-var src = process.argv[2] || "/front";
+var src = process.argv[2] || "/static";
 
 http.createServer((req, res) => {
   var url = (req.url == "/")? "index.html": req.url;
