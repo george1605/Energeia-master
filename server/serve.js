@@ -1,21 +1,12 @@
 // this will deploy the entire dir 
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
-const mime = require('./mime');
+const express = require('express');
+const app = express();
 
-console.log("Starting server");
-var src = process.argv[2] || "/static";
+app.listen(process.env.PORT || 3000);
 
+app.use(express.static('public'))
+app.get('/', (req, res) => {
+  res.sendFile('index.html', { root: path.join(__dirname, 'public') });
+})
 
-var srv = http.createServer((req, res) => {
-  var url = (req.url == "/")? "index.html": req.url;
-  var pat = path.join(process.cwd(),src,url);
-  var encoding = null;
-  if(pat.includes(".png") || pat.includes(".jpg"))
-    encoding = "binary";
-  mime.sendPipe(res, pat);
-});
-
-srv.listen(3000);
-module.exports = srv;
+module.exports = app;
