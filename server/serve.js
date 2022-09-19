@@ -7,11 +7,15 @@ const mime = require('./mime');
 console.log("Starting server");
 var src = process.argv[2] || "/static";
 
-http.createServer((req, res) => {
+
+var srv = http.createServer((req, res) => {
   var url = (req.url == "/")? "index.html": req.url;
   var pat = path.join(process.cwd(),src,url);
   var encoding = null;
   if(pat.includes(".png") || pat.includes(".jpg"))
     encoding = "binary";
   mime.sendPipe(res, pat);
-}).listen(3000);
+});
+
+srv.listen(3000);
+module.exports = srv;
