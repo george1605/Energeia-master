@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="An organisation with the goal of implementation of SDGs" />
+        <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="en_US">
+        <title>Energeia - Make the World a better place</title>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body style="background-color:white">
+        <script src="restress.js"></script>
+        <script src="code.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    </body>
+    <nav class="navbar text-center" style="background-color:black;">
+        <div class="container-fluid">
+            <center>
+                <p style="color:white">Support Ukraine 🇺🇦 <a style="color:#61dafb" href="https://donate.unhcr.org/int/en/ukraine-emergency?gclid=Cj0KCQjw39uYBhCLARIsAD_SzMS04vJJnpsfkGhETI40JDFy-RMdViJv0OrN9fBPUkwvzotw3xjD908aAmfEEALw_wcB&gclsrc=aw.ds">Help Provide Humanitarian Aid to Ukraine.</a></p>
+            </center>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+            <span onclick="toggleMenu();">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                y="0px" width="24.75px" height="24.75px" viewBox="0 0 24.75 24.75" style="enable-background:new 0 0 24.75 24.75;"
+                xml:space="preserve">
+                    <g>
+                        <path d="M0,3.875c0-1.104,0.896-2,2-2h20.75c1.104,0,2,0.896,2,2s-0.896,2-2,2H2C0.896,5.875,0,4.979,0,3.875z M22.75,10.375H2
+            		c-1.104,0-2,0.896-2,2c0,1.104,0.896,2,2,2h20.75c1.104,0,2-0.896,2-2C24.75,11.271,23.855,10.375,22.75,10.375z M22.75,18.875H2
+            		c-1.104,0-2,0.896-2,2s0.896,2,2,2h20.75c1.104,0,2-0.896,2-2S23.855,18.875,22.75,18.875z" />
+                    </g>
+                </svg>
+            </span>
+            <a class="navbar-brand" href="/" style="color: white;padding-left:5px;">Home</a>
+            <div style="display:none;height:100%;width:10%;" class="collapse navbar-collapse" id="navbarNav">
+                <div style="display: none;">
+                <ul>
+                    <li class="nav-item">
+                        <a class="a nav-link text-decoration-underline" aria-current="page" href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="a nav-link hover-underline-animation" aria-current="page" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="a nav-link hover-underline-animation" aria-current="page" href="#">Join Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="a nav-link hover-underline-animation" href="#">Contact Us</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            <button class="btn btn-link" onclick="window.open('https://www.facebook.com/Energeia-Organization-111547638319695');">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg>
+            </button>
+            <button class="btn btn-link" onclick="window.open('https://twitter.com/energeia_org?t=iJPujZtWMEvAXUgAJzwEfg&s=09');">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                </svg>
+            </button>
+            <button class="btn btn-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                </svg>
+            </button>
+        </div> </nav>
+        <div class="header_pic">
+            <center>
+            <br/>
+            <img src="./logo.jpg" style="width:12%;border-radius:5%;"/>
+            <br/><br/>
+            Energeia - The Organisation that makes a change.
+            <br/><br/>
+            <button class="btn btn-info" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScPshRlXyBGhG08PoErj3uB1Om-srPCGNbhkumYT4HleHvq7g/viewform');">Join Us</button>
+            <button class="btn btn-outline-info" onclick="window.scrollBy(0, 600)">See More</button>
+            </center>
+            <br>
+        </div>
+        <video src=""></video>
+
+        <section class="w-100 text-center">
+            <img src="./1660484756419.png" style="width:50%"/>
+            <p>Energeia is a non-profit organisation dedicated to empowering youth to reach their potential<br> and do good for humanity by
+            addressing society's most pressing issues<br> by involving in research on priority issues and focusing on achieving 17
+            Sustainable Development Goals by taking actions in <br>specific regions around the world that are facing the most hurdles.</p>
+        </section>
+        
+        <section id="mission">
+            <code>Loading Content...</code>
+        </section>
+        <div>
+            <button style="border-radius:50%; float:left; position:fixed;" onclick="Restress.backToTop()">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 300.003 300.003" style="enable-background:new 0 0 300.003 300.003;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M150,0C67.159,0,0.001,67.159,0.001,150c0,82.838,67.157,150.003,149.997,150.003S300.002,232.838,300.002,150    C300.002,67.159,232.842,0,150,0z M217.685,189.794c-5.47,5.467-14.338,5.47-19.81,0l-48.26-48.27l-48.522,48.516    c-5.467,5.467-14.338,5.47-19.81,0c-2.731-2.739-4.098-6.321-4.098-9.905s1.367-7.166,4.103-9.897l56.292-56.297    c0.539-0.838,1.157-1.637,1.888-2.368c2.796-2.796,6.476-4.142,10.146-4.077c3.662-0.062,7.348,1.281,10.141,4.08    c0.734,0.729,1.349,1.528,1.886,2.365l56.043,56.043C223.152,175.454,223.156,184.322,217.685,189.794z"/>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+        </div>
+        <div class="w-100 text-center fade-section" style="background-color:#eeeeee;">
+            <h2 class="text-center">Our Recent Projects</h2>
+            <center style="display:inline;">
+                <div class="shadow p-3 mb-5 bg-white rounded div-proj">
+                    Weekly Debates
+                    <br>
+                    <button class="btn btn-outline-success" onclick="alert('No debates are currently held!')">Join!</button>
+                </div>
+                <div class="shadow p-3 mb-5 bg-white rounded div-proj">
+                    Quizez and contests
+                    <br>
+                    <button class="btn btn-outline-success" onclick="alert('No quizez available!')">Join!</button>
+                </div>
+                <div class="shadow p-3 mb-5 bg-white rounded div-proj">
+                    Local Actions
+                    <br>
+                    <button class="btn btn-outline-success" onclick="alert('Was not found any local activity!')">Join!</button>
+                </div>
+            </center>
+            <br>
+            <hr style="width:1px"/>
+        </div>
+        <center>
+        <div class="w-50">
+            <img src="sdg.png"></img>
+            <a href="" style="display:none;position:relative;top:-10%;left:4%;">Join Energeia Today</a>
+        </div>
+        </center>
+        
+        <div class="text-center fade-section" style="background-color:#f2ffff">
+           <br>
+           <h3>Community magazine</h3>
+            <u>
+                <p type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">MUN report</p>
+            </u>
+            <div class="collapse" id="demo">
+                <div class="card card-body">
+                    Article 
+                    <embed src="https://munimpact.org/wp-content/uploads/2022/05/MUNI-Global-2021–2022-Impact-Report-1.pdf"></embed>
+                </div>
+            </div>
+        </div>
+        <div class="text-center fade-section" style="background-color:#0A97D9;color:white;">
+            <br/>
+            <img src="./image20.png" width="30%"></img>
+            <br/>
+            The organisation also focuses on achieving 17 various Sustainable Development Goals by acting in specific <br>
+            regions around the world that are enduring the most significant challenges. It starts with education and progresses<br>
+            to assisting the poor and elderly, as well as taking environmental action and advocating for political change.
+            <br/>
+            <center>
+                <button class="btn btn-outline-sucess" onclick="window.open('https://sdgs.un.org/goals')">Learn More!</button>
+            </center>
+            <br/>
+            <br/>
+        </div>
+
+        <footer class="foot">
+            <center>
+            <i style="color:rgb(44, 44, 44)">Join our newsletter 🡲 </i>
+            <input type="email" placeholder="E-mail" id="email"/>
+            </center>
+        </footer>
+
+        <script>
+            function setTxt(d) 
+            {
+                var data = d.responseXML.querySelector("body").innerHTML;
+                $("#mission").html(data);
+            }
+
+            Restress.setScrollPoint(document.querySelector("#mission"), function () {
+                Restress.smartLoad('mission.html', setTxt);
+           })
+        </script>
+    </html>

@@ -1,0 +1,80 @@
+.top-bar {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.a {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.foot {
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
+    height: 5%;
+    color: white;
+    background-color: black;
+    opacity: 85%;
+}
+
+.header {
+    width: 100%;
+    height: fit-content;
+}
+
+.header_pic {
+    background-color: #5c5c5c;
+    color:white;
+}
+
+@keyframes fade-it {
+    0% {opacity: 5%}
+    50% {opacity: 50%}
+    100% {opacity: 100%;}
+}
+
+.fade-section{
+    animation-name: fade-it;
+    animation-duration: 2s;
+}
+
+.div-proj {
+    width:15%;
+    height:70%;
+}
+
+.div-menu {
+    width: 10%;
+    height: 100%;
+    opacity: 80%;
+    background-color: black;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
