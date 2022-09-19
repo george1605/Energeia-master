@@ -45,8 +45,12 @@
 }
 
 .div-proj {
-    width:15%;
-    height:70%;
+    animation: 1s menu-anim infinite;
+}
+
+@keyframes menu-anim {
+    from {width:0%;height:0%;}
+    to {width:17%;height: 100%;}
 }
 
 .div-menu {
