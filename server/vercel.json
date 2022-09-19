@@ -1,16 +1,14 @@
 {
-    "name":"energeia",
-    "version": 2,
     "builds": [
         {
-            "src": "./serve.js",
+            "src": "serve.js",
             "use": "@vercel/node"
         }
     ],
-    "rewrites": [
+    "routes": [
         {
-            "source": "/(.*)",
-            "destination": "/static/"
+            "src": "/(.*)",
+            "dest": "serve.js"
         }
     ]
 }
