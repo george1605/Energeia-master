@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/george1605/Energeia-master/issues"
   },
+  "dependencies": {
+    "express": "^4.18.1"
+  },
   "homepage": "https://github.com/george1605/Energeia-master#readme"
 }
