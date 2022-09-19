@@ -1,9 +1,13 @@
 const express = require('express');
 const router = express.Router();
+// const orm = require('sql-wrapper')
 
 router.get("/", async (req, res) => {
     try {
-        res.json({"Why":"This?"});
+        res.json({
+            "Request":req.body,
+            "Response":""
+        });
     }catch(e)
     {
         console.log(e);
