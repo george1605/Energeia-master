@@ -1,1 +1,15 @@
-{"projectId":"prj_WM5ZzW2eP9hzZ2i9pkompkOWnhqu","orgId":"hiobOnPJhNNH0WYx3eWfT8Wc"}
+{
+  "projectId": "prj_WM5ZzW2eP9hzZ2i9pkompkOWnhqu",
+  "orgId": "hiobOnPJhNNH0WYx3eWfT8Wc",
+  "settings": {
+    "createdAt": 1663593967648,
+    "framework": null,
+    "devCommand": null,
+    "installCommand": null,
+    "buildCommand": null,
+    "outputDirectory": null,
+    "rootDirectory": null,
+    "directoryListing": false,
+    "nodeVersion": "16.x"
+  }
+}

@@ -1,10 +1,24 @@
 {
-  "name": "my-fc-app",
-  "version": "1.0.0",
-  "description": "My WebApp",
+  "name": "energeia-master",
+  "version": "1.2.0",
+  "description": "The energeia website on vercel",
   "main": "index.js",
-  "engines": {
-    "node": "14.x"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
-  "start": "node index.js"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/george1605/Energeia-master.git"
+  },
+  "keywords": [
+    "node",
+    "better-web"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/george1605/Energeia-master/issues"
+  },
+  "homepage": "https://github.com/george1605/Energeia-master#readme"
 }
