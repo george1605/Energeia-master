@@ -9,16 +9,10 @@
         {
             "src": "/(.*)",
             "dest": "/"
-        }
-    ],
-    "rewrites": [
-        {
-            "source": "/api/(.*)",
-            "destination": "/api"
         },
         {
-                "src": "/(.*)",
-                "dest": "/"
+            "src": "/api/(.*)",
+            "dest": "/api"
         }
     ]
 }

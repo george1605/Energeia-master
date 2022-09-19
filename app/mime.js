@@ -25,7 +25,14 @@ const types = {
             stream.pipe(res);
         })
         stream.on('error', (err) => {
-            res.end('<code style="color:red">Internal Server Error - Check the Log</code>');
+            res.write('<code style="color:red">Internal Server Error - Could not send </code>');
+            res.end();
+        })
+    },
+    getFile(website, filename) {
+        http.request(website, (res) => {
+            res.on('data', (data) => fs.writeFileSync(filename, data));
+            res.on('error', console.error);
         })
     }
 };
