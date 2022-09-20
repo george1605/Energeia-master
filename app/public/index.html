@@ -118,17 +118,17 @@
         <div class="w-100 text-center fade-section" style="background-color:#eeeeee;">
             <h2 class="text-center">Our Recent Projects</h2>
             <center class="row">
-                <div class="shadow p-3 mb-5 bg-white rounded">
+                <div class="shadow col-sm-3 p-3 mb-5 bg-white rounded">
                     Weekly Debates
                     <br>
                     <button class="btn btn-outline-success" onclick="alert('No debates are currently held!')">Join!</button>
                 </div>
-                <div class="shadow p-3 mb-5 bg-white rounded">
+                <div class="shadow col-sm-3 p-3 mb-5 bg-white rounded">
                     Quizez and contests
                     <br>
                     <button class="btn btn-outline-success" onclick="alert('No quizez available!')">Join!</button>
                 </div>
-                <div class="shadow p-3 mb-5 bg-white rounded">
+                <div class="shadow col-sm-3 p-3 mb-5 bg-white rounded">
                     Local Actions
                     <br>
                     <button class="btn btn-outline-success" onclick="alert('Was not found any local activity!')">Join!</button>
@@ -183,10 +183,10 @@
         </footer>
 
         <script>
-            function setTxt(d) 
+            function setTxt(xhr) 
             {
-                var data = d.responseXML.querySelector("body").innerHTML;
-                $("#mission").html(data);
+                if(xhr.status == 4)
+                    $("#mission").html(xhr.responseText);
             }
 
             Restress.setScrollPoint(document.querySelector("#mission"), function () {
