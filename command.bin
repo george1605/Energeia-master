@@ -1,0 +1,6 @@
+# start 
+cd app & node index.js
+
+# deploy
+git commit -m ${0}
+vercel --prod --force
