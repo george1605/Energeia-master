@@ -22,11 +22,11 @@
         crossorigin="anonymous"></script>
     </body>
     <nav class="navbar text-center" style="background-color:black;">
+        <center>
         <div class="container-fluid">
-            <center>
-                <p style="color:white">Support Ukraine 🇺🇦 <a style="color:#61dafb" href="https://donate.unhcr.org/int/en/ukraine-emergency?gclid=Cj0KCQjw39uYBhCLARIsAD_SzMS04vJJnpsfkGhETI40JDFy-RMdViJv0OrN9fBPUkwvzotw3xjD908aAmfEEALw_wcB&gclsrc=aw.ds">Help Provide Humanitarian Aid to Ukraine.</a></p>
-            </center>
+            <p style="color:white">Support Ukraine 🇺🇦 <a style="color:#61dafb" href="https://donate.unhcr.org/int/en/ukraine-emergency?gclid=Cj0KCQjw39uYBhCLARIsAD_SzMS04vJJnpsfkGhETI40JDFy-RMdViJv0OrN9fBPUkwvzotw3xjD908aAmfEEALw_wcB&gclsrc=aw.ds">Help Provide Humanitarian Aid to Ukraine.</a></p>
         </div>
+        </center>
     </nav>
     <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
@@ -117,19 +117,22 @@
         </div>
         <div class="w-100 text-center fade-section" style="background-color:#eeeeee;">
             <h2 class="text-center">Our Recent Projects</h2>
-            <center class="row">
+            <center class="row gx-4 d-flex justify-content-center">
                 <div class="shadow col-sm-3 p-3 mb-5 bg-white rounded">
                     Weekly Debates
+                    <br>
                     <br>
                     <button class="btn btn-outline-success" onclick="alert('No debates are currently held!')">Join!</button>
                 </div>
                 <div class="shadow col-sm-3 p-3 mb-5 bg-white rounded">
                     Quizez and contests
                     <br>
+                    <br>
                     <button class="btn btn-outline-success" onclick="alert('No quizez available!')">Join!</button>
                 </div>
                 <div class="shadow col-sm-3 p-3 mb-5 bg-white rounded">
                     Local Actions
+                    <br>
                     <br>
                     <button class="btn btn-outline-success" onclick="alert('Was not found any local activity!')">Join!</button>
                 </div>
@@ -169,7 +172,7 @@
             to assisting the poor and elderly, as well as taking environmental action and advocating for political change.
             <br/>
             <center>
-                <button class="btn btn-outline-sucess" onclick="window.open('https://sdgs.un.org/goals')">Learn More!</button>
+                <button class="btn btn-sucess" onclick="window.open('https://sdgs.un.org/goals')">Learn More!</button>
             </center>
             <br/>
             <br/>
@@ -177,7 +180,7 @@
 
         <footer class="foot">
             <center>
-            <i style="color:rgb(44, 44, 44)">Join our newsletter 🡲 </i>
+            <i style="color:rgb(44, 44, 44)"> Join our newsletter 🡲 </i>
             <input type="email" placeholder="E-mail" id="email"/>
             </center>
         </footer>
@@ -185,6 +188,7 @@
         <script>
             function setTxt(xhr) 
             {
+                alert(xhr.responseText);
                 if(xhr.status == 4)
                     $("#mission").html(xhr.responseText);
             }
