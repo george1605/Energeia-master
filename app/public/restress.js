@@ -134,13 +134,13 @@ Restress.setScrollPoint = function(elem, f) {
 Restress.hideMenu = function (menuSelector) {
   var q = document.querySelector(menuSelector);
   q.classList.add("hidden");
-  q.classList.remove("div-menu");
+  q.classList.remove("div-proj");
 }
 
 Restress.showMenu = function (menuSelector) {
   var q = document.querySelector(menuSelector);
   q.classList.remove("hidden");
-  q.classList.add("div-menu");
+  q.classList.add("div-proj");
 }
 
 var isShowing = false;
