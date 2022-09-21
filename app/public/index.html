@@ -118,19 +118,19 @@
         <div class="w-100 text-center fade-section px-4" style="background-color:#eeeeee;">
             <h2 class="text-center">Our Recent Projects</h2>
             <center class="row gx-4 d-flex justify-content-center">
-                <div class="shadow col-sm-3 p-3 mb-5 bg-white rounded">
+                <div class="shadow col-sm-2 p-3 mb-5 bg-white rounded">
                     Weekly Debates
                     <br>
                     <br>
                     <button class="btn btn-outline-success" onclick="alert('No debates are currently held!')">Join!</button>
                 </div>
-                <div class="shadow col-sm-3 p-3 mb-5 bg-white rounded">
+                <div class="shadow col-sm-2 p-3 mb-5 bg-white rounded">
                     Quizez and contests
                     <br>
                     <br>
                     <button class="btn btn-outline-success" onclick="alert('No quizez available!')">Join!</button>
                 </div>
-                <div class="shadow col-sm-3 p-3 mb-5 bg-white rounded">
+                <div class="shadow col-sm-2 p-3 mb-5 bg-white rounded">
                     Local Actions
                     <br>
                     <br>
@@ -141,9 +141,11 @@
             <hr style="width:1px"/>
         </div>
         <center>
-        <div class="w-50">
+        <div class="w-50" id="sdg">
             <img src="sdg.png"></img>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScPshRlXyBGhG08PoErj3uB1Om-srPCGNbhkumYT4HleHvq7g/viewform" style="display:none;position:relative;top:-10%;left:4%;">Join Energeia Today</a>
+            <div onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScPshRlXyBGhG08PoErj3uB1Om-srPCGNbhkumYT4HleHvq7g/viewform')"
+                 style="display:none;position:relative;top:-10%;left:5%;">
+            </div>
         </div>
         </center>
         
@@ -165,19 +167,19 @@
             </div>
           </div>
         </div>
-        <div class="text-center fade-section" style="background-color:#0A97D9;color:white;">
-            <br/>
+        <div class="text-center" style="background-color:#0A97D9;color:white;">
+            <br>
             <img src="./image20.png" width="30%"></img>
-            <br/>
+            <br>
             The organisation also focuses on achieving 17 various Sustainable Development Goals by acting in specific <br>
             regions around the world that are enduring the most significant challenges. It starts with education and progresses<br>
             to assisting the poor and elderly, as well as taking environmental action and advocating for political change.
-            <br/>
+            <br>
             <center>
                 <button class="btn btn-sucess" onclick="window.open('https://sdgs.un.org/goals')">Learn More!</button>
             </center>
-            <br/>
-            <br/>
+            <br>
+            <br>
         </div>
 
         <footer class="foot">
@@ -193,9 +195,14 @@
                 if(xhr.readyState == 4)
                     document.getElementById("mission").innerHTML = xhr.responseText;
             }
+            var image0 = document.querySelector("#sdg");
 
             Restress.setScrollPoint(document.querySelector("#mission"), function () {
                 Restress.smartLoad('mission.html', setTxt);
+            })
+            
+            Restress.setScrollPoint(image0, function () {
+                image0.classList.add("fade-section");
             })
         </script>
     </html>
