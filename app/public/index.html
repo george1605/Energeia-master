@@ -190,9 +190,8 @@
         <script>
             function setTxt(xhr) 
             {
-                alert(xhr.responseText);
-                if(xhr.status == 4)
-                    $("#mission").html(xhr.responseText);
+                if(xhr.readyState == 4)
+                    document.getElementById("mission").innerHTML = xhr.responseText;
             }
 
             Restress.setScrollPoint(document.querySelector("#mission"), function () {
