@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-// const orm = require('sql-wrapper')
 
 router.get("/", async (req, res) => {
     try {
