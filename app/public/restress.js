@@ -89,7 +89,7 @@ Restress.findClass = function(string, name) {
 }
 
 // the... lazy loading
-Restress.genPoints = [];
+Restress.genPoints = {};
 
 Restress.smartLoad = function(page, func) {
   var xhr = new XMLHttpRequest();
@@ -118,13 +118,16 @@ Restress.isInViewport = function(elem) {
 }
 
 Restress.setScrollPoint = function(elem, f) {
-  Restress.genPoints.push(elem.getBoundingClientRect().top);
-  window.onscroll = function() {
-    for(var i = 0;i < Restress.genPoints.length;i++)
-      if(Restress.genPoints[i] > window.scrollY)
-      {
+  Restress.genPoints[elem.getBoundingClientRect().top] = f;
+}
+
+Restress.initScroll = function() {
+  window.onscroll = function () {
+    var keys = Object.keys(Restress.genPoints);
+    for (var i = 0; i < keys.length; i++)
+      if (i > window.scrollY) {
         f();
-        Restress.genPoints.splice(i, 1);
+        Restress.genPoints[i] = () => {};
       }
   }
 }
