@@ -5,6 +5,22 @@
     background-color: #ffffff;
 }
 
+.sp {
+    margin-left: 5%;
+}
+
+.sp:hover {
+    box-shadow: 2px 3px 6px rgb(9, 172, 9);
+}
+
+.parallax {
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .a {
     color: white;
 }
@@ -31,6 +47,12 @@
 .header_pic {
     background-color: #5c5c5c;
     color:white;
+}
+
+.closed-nav {
+    display: none;
+    height: 100%;
+    width: 10%;
 }
 
 @keyframes fade-it {

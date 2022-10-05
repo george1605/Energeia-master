@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8"/>
         <meta name="description" content="An organisation with the goal of implementation of SDGs" />
         <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -30,7 +30,7 @@
     </nav>
     <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
-            <span onclick="toggleMenu();">
+            <span onclick="document.querySelector('#navbarNav').classList.toggle('div-menu');">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                 y="0px" width="24.75px" height="24.75px" viewBox="0 0 24.75 24.75" style="enable-background:new 255 255 254.75;"
                 xml:space="preserve">
@@ -42,7 +42,7 @@
                 </svg>
             </span>
             <a class="navbar-brand" href="/" style="color: white;padding-left:5px;">Home</a>
-            <div style="display:none;height:100%;width:10%;" class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse closed-nav" id="navbarNav">
                 <div style="display: none;">
                 <ul>
                     <li class="nav-item">
@@ -92,8 +92,8 @@
             </center>
             <br>
         </div>
-        <video src=""></video>
-
+        <br>
+        <br>
         <section class="w-100 text-center">
             <img src="./1660484756419.png" style="width:50%"/>
             <p>Energeia is a non-profit organisation dedicated to empowering youth to reach their potential<br> and do good for humanity by
@@ -118,22 +118,25 @@
         <div class="w-100 text-center fade-section px-4" style="background-color:#eeeeee;">
             <h2 class="text-center">Our Recent Projects</h2>
             <center class="row gx-4 d-flex justify-content-center">
-                <div class="shadow col-sm-2 p-3 mb-5 bg-white rounded">
+                <div class="sp shadow col-sm-2 p-3 mb-5 bg-white rounded">
                     Weekly Debates
-                    <br>
-                    <br>
+                    <br><br>
+                    <img src="debate.jpg" style="width:80%">
+                    <br><br>
                     <button class="btn btn-outline-success" onclick="alert('No debates are currently held!')">Join!</button>
                 </div>
-                <div class="shadow col-sm-2 p-3 mb-5 bg-white rounded">
+                <div class="sp shadow col-sm-2 p-3 mb-5 bg-white rounded">
                     Quizez and contests
-                    <br>
-                    <br>
+                    <br><br>
+                    <img src="quiz.webp" style="width:80%">
+                    <br><br>
                     <button class="btn btn-outline-success" onclick="alert('No quizez available!')">Join!</button>
                 </div>
-                <div class="shadow col-sm-2 p-3 mb-5 bg-white rounded">
+                <div class="sp shadow col-sm-2 p-3 mb-5 bg-white rounded">
                     Local Actions
-                    <br>
-                    <br>
+                    <br><br>
+                    <img src="volunteer.webp" style="width:80%">
+                    <br><br>
                     <button class="btn btn-outline-success" onclick="alert('Was not found any local activity!')">Join!</button>
                 </div>
             </center>
@@ -153,17 +156,15 @@
            <br>
            <h3>Community magazine</h3>
            <div class="container">
-           <div class="panel panel-default" id="demo">
-                <div class="panel-heading">
-                    <h2 class="panel-title">
-                        <i class="fas fa-chevron-circle-down"></i>
-                        <span class="separator"></span>
-                        <a>MUN Report</a>
-                    </h2>
-                </div>
-                <div class="panel-body">
-                    <embed src="https://munimpact.org/wp-content/uploads/2022/05/MUNI-Global-2021–2022-Impact-Report-1.pdf"></embed>
-                </div>
+        <details>
+            <summary><u><h2>MUN Report</h2></u></summary>
+            <div class="panel-body">
+                <object data="https://munimpact.org/wp-content/uploads/2022/05/MUNI-Global-2021–2022-Impact-Report-1.pdf" type="application/pdf" width="37%" height="20%">
+                    <p>Your web browser doesn't have a PDF plugin.
+                        Click <a href="https://munimpact.org/wp-content/uploads/2022/05/MUNI-Global-2021–2022-Impact-Report-1.pdf">here to download.</a></p>
+                </object>
+            </div>
+        </details>
             </div>
           </div>
         </div>
@@ -174,23 +175,23 @@
             The organisation also focuses on achieving 17 various Sustainable Development Goals by acting in specific <br>
             regions around the world that are enduring the most significant challenges. It starts with education and progresses<br>
             to assisting the poor and elderly, as well as taking environmental action and advocating for political change.
-            <br>
+            <br><br>
             <center>
-                <button class="btn btn-sucess" onclick="window.open('https://sdgs.un.org/goals')">Learn More!</button>
+                <button class="btn btn-info" onclick="window.open('https://sdgs.un.org/goals')">Learn More!</button>
             </center>
             <br>
             <br>
         </div>
-        <div id="follow-image" style="background-color:lightblue">
+        <div id="follow-image" class="parallax">
             <center>
-            <img src="follow_us.jpg" width="40%"></img>
+            <img src="follow_us.jpg" width="100%"></img>
             </center>
         </div>
 
-        <footer class="foot">
+        <footer class="foot" onload="addNewsletter();">
             <center>
             <i style="color:rgb(44, 44, 44)"> Join our newsletter 🡲 </i>
-            <input type="email" placeholder="E-mail" id="email"/>
+            <input type="email" placeholder="E-mail" id="newsletter"/>
             </center>
         </footer>
 
@@ -200,14 +201,11 @@
                 if(xhr.readyState == 4)
                     document.getElementById("mission").innerHTML = xhr.responseText;
             }
-            var image0 = document.querySelector("#sdg");
 
             Restress.setScrollPoint(document.querySelector("#mission"), function () {
                 Restress.smartLoad('mission.html', setTxt);
             })
-            
-            Restress.setScrollPoint(image0, function() {
-                image0.classList.add("fade-section");
-            })
+
+            Restress.initScroll();
         </script>
     </html>

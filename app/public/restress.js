@@ -126,28 +126,12 @@ Restress.initScroll = function() {
     var keys = Object.keys(Restress.genPoints);
     for (var i = 0; i < keys.length; i++)
       if (i > window.scrollY) {
-        f();
+        Restress.genPoints[i]();
         Restress.genPoints[i] = () => {};
       }
   }
 }
 
-Restress.hideMenu = function (menuSelector) {
-  var q = document.querySelector(menuSelector);
-  q.classList.add("hidden");
-  q.classList.remove("div-proj");
-}
-
-Restress.showMenu = function (menuSelector) {
-  var q = document.querySelector(menuSelector);
-  q.classList.remove("hidden");
-  q.classList.add("div-proj");
-}
-
-var isShowing = false;
 function toggleMenu() {
-  if(!isShowing)
-    Restress.showMenu("#navbarNav");
-  else
-    Restress.hideMenu("#navbarNav");
+  document.querySelector("#navbarNav").classList.toggle("div-menu");
 }

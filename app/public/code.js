@@ -7,20 +7,19 @@ function preventXSS(input)
     return input.replace("<", "&lt;").replace(">", "&gt;");
 }
 
-function createWS(url)
+function addNewsletter()
 {
-    return new WebSocket("ws://" + url);    
-}
 
-function handleWS(ws, onMsg, onOpen, onError)
-{
-    ws.onopen = onOpen;
-    ws.onerror = onError;
-    ws.onmessage = onMsg;
-    ws.onclose = () => {};
-}
-        
-function sendWS(ws, json)
-{
-    ws.send(JSON.stringify(json));      // json request
+document.querySelector("#newsletter").addEventListener('keypress', (e) => {
+    if(e.code == 13)
+    {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/form", true);
+        xhr.onreadystatechange = () => {
+            console.log("XHR Newsletter Status: ", xhr.status);
+        }
+        xhr.send(preventXSS(e.target.value));
+    }
+})
+
 }
