@@ -72,14 +72,7 @@
 
 @keyframes menu-anim {
     from {width:0%;height:0%;}
-    to {width:17%;height: 100%;}
-}
-
-.div-menu {
-    width: 10%;
-    height: 100%;
-    opacity: 80%;
-    background-color: black;
+    to {width:17%;height: 100%;opacity:80%;color:white;background-color: black;}
 }
 
 .hover-underline-animation {

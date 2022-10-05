@@ -13,8 +13,8 @@ app.get('/', (req, res) => {
 })
 
 app.post('/form', (req, res) => {
-  var body = req.body.replace("<","&lt;").replace(">","&rt;");
-  fs.writeFileSync("main.csv", body + ";", {flag: 'a'});
+  var body = req.body.replace("<","&lt;").replace(">","&rt;").replace(",", "_");
+  fs.writeFileSync("main.csv", body + ",", {flag: 'a'});
   res.json({ok: true});
 })
 
