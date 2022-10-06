@@ -21,6 +21,10 @@
     background-size: cover;
 }
 
+.nav {
+    text-align: center;
+}
+
 .a {
     color: white;
 }
