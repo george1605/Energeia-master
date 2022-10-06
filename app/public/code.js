@@ -1,5 +1,5 @@
 window.eval = (x) => {
-        console.error("Call to eval blocked!");
+    console.error("Call to eval blocked!");
 };
 
 function preventXSS(input)
@@ -9,17 +9,15 @@ function preventXSS(input)
 
 function addNewsletter()
 {
-
-document.querySelector("#newsletter").addEventListener('keypress', (e) => {
-    if(e.code == 13)
-    {
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "/form", true);
-        xhr.onreadystatechange = () => {
-            console.log("XHR Newsletter Status: ", xhr.status);
+    document.querySelector("#newsletter").addEventListener('keypress', (e) => {
+        if(e.code == 13)
+        {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/form", true);
+            xhr.onreadystatechange = () => {
+                console.log("XHR Newsletter Status: ", xhr.status);
+            }
+            xhr.send(preventXSS(e.target.value));
         }
-        xhr.send(preventXSS(e.target.value));
-    }
-})
-
+    })
 }
