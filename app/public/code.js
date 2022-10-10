@@ -9,9 +9,9 @@ function preventXSS(input)
 
 function addNewsletter(e)
 {
+    var xhr = new XMLHttpRequest();
     if(e.code == 13)
     {
-        var xhr = new XMLHttpRequest();
         xhr.open("POST", "/form", true);
         xhr.onreadystatechange = () => {
             console.log("XHR Newsletter Status: ", xhr.status);

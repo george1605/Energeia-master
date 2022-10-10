@@ -2,7 +2,9 @@
     position: absolute;
     top: 0%;
     width: 100%;
-    background-color: #ffffff;
+    background-color: black;
+    color: white;
+    text-align: center;
 }
 
 .sp {
@@ -40,7 +42,7 @@
     height: 5%;
     color: white;
     background-color: black;
-    opacity: 85%;
+    opacity: 88%;
 }
 
 .header {
